@@ -1,8 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
+import contacts from "./contacts"
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <div>
+    <h1 className="heading">My Contacts</h1>
+    <App name={contacts[0].name} img={contacts[0].imgURL} tel={contacts[0].phone} email={contacts[0].email} />
+    <App name={contacts[1].name} img={contacts[1].imgURL} tel={contacts[1].phone} email={contacts[1].email} />
+    <App name={contacts[2].name} img={contacts[2].imgURL} tel={contacts[2].phone} email={contacts[2].email} />
+    </div>, 
+document.getElementById("root"));
 
 //1. Apply CSS styles to App.jsx component
 //to match the appearance on the completed app:
